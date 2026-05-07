@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Sessions</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:powderblue;" class="bg-gray-100 flex items-center justify-center h-screen">
+    
+    <div class="flex flex-col items-stretch w-[420px]">
+        <div class="tab flex">
+            <button id = "timerViewTabBtn" class="tablinks flex-1 py-3 px-4 text-sm font-medium border border-b-0 rounded-tl-lg active">Timer</button>
+            <button id = "calendarViewTabBtn" class="tablinks flex-1 py-3 px-4 text-sm font-medium border border-b-0 rounded-tr-lg">Daily Calendar</button>
+        </div>
+
+
+   
+        <div id="calendarView" style="display:none;">
+            <div id="dayCalendar" class="day-calendar"></div>
+        </div>
+
+    <!-- A basic example container using Tailwind utility classes -->
+        <div id = "timerView" class="text-center p-10 bg-white shadow-xl rounded-br-bl-lg">
+            <audio src="ding.mp3" id = "alarm"></audio>
+            <h1 class="text-4xl font-bold text-gray-800 mb-4" id = "clockReadingText"></h1>
+            <h1 class="text-4xl font-bold text-gray-800 mb-4" id = "result"></h1>
+            <!-- <p class="text-gray-600" id = "demo"></p> -->
+            <!-- <label for="username">Work Time:</label>
+            <input type="text" id="workTime" name="workTime">
+            <label for="username">Break Time:</label>
+            <input type="text" id="breakTime" name="breakTime"> -->
+            <br>
+            <h3 class="text-lg text-gray-800 mb-4"> Choose Task </h3>
+
+            <select id = "taskSelect" class="h-200 w-300">
+                <option value='Coding'>Coding</option>
+                <option value='GMAT'>GMAT</option>
+                <option value='News'>News / Stocks</option>
+                <option value='Admin'>Admin</option>
+                <option value='Other'>Other</option>
+            </select>
+
+            <br><br>
+            <button class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id = "startClockBtn">
+                Start Timer
+            </button>
+            <button class="mt-6 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" id = "cancelClockBtn">
+                Cancel Timer
+            </button>
+
+            <br><br>
+
+
+            <!-- <div class = 'wrapper'>
+                <div id="objToBeDragged" class="inline-tasks" draggable="true" onDragStart="return dragStart(event)" style = ".item1 {
+    grid-area: a;
+    }">
+                    <p>Coding</p>
+                </div>
+                <div id="objToBeDragged" class="inline-tasks" draggable="true" onDragStart="return dragStart(event)" style = ".item2 {
+    grid-area: b;
+    }">
+                    <p>Admin</p>
+                </div>
+                <div id="objToBeDragged" class="inline-tasks" draggable="true" onDragStart="return dragStart(event)" style = ".item3 {
+    grid-area: c;
+    }">
+                    <p>GMAT</p>
+                </div>
+                <div id="objToBeDragged" class="inline-tasks" draggable="true" onDragStart="return dragStart(event)" style = ".item4 {
+    grid-area: d;
+    }">
+                    <p>Other</p>
+                </div> -->
+                
+            <!-- </div> -->
+
+            <br>
+            <!-- <p>Session Tasks</p>
+            <div id="objToBeDropped" class="session-drop-wrapper" onDragEnter="return dragEnter(event)"
+                onDrop="return dragDrop(event)" onDragOver="return dragOver(event)">
+                
+            </div> -->
+        </div>
+     </div>
+
+    
+    
+    <script type = 'module' src="backend.js" defer></script>
+    <script src="worker.js" defer></script>
+    
+		
+	</body>
+
+    
+    
+
+</html>
