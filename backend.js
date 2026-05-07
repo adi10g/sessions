@@ -21,8 +21,8 @@ const CATEGORY_COLORS = {
 
 
 
-let minutes = 0;
-let seconds = 10; 
+let minutes = 25;
+let seconds = 0; 
 
 
 // Tabs 
