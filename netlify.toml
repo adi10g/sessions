@@ -1,4 +1,2 @@
-[dev]
-  command = "python -m http.server 8000"
-  targetPort = 8000
-  framework = "#custom"
+[build]
+  publish = "." 
